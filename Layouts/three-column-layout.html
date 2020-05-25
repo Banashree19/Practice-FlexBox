@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Three Columns Layout - HTML</title>
+	<meta name="view-port" content="width=device-width,initiale-scale=1.0">
+	<style>
+		div,section{
+			border: 1px solid red;
+			padding: 20px;
+		}
+		div{
+			box-sizing: border-box;
+		}
+		.container{
+			float: left;
+			width: 100%;
+			/*margin: 10px;*/
+		}
+		.container div{
+			float: left;
+			width: 32.7%;
+		}
+		.container div:first-child,
+		.container div:nth-child(2),
+		.flexContainer section:first-child,
+		.flexContainer section:nth-child(2)
+		{
+			margin-right: 10px;
+		}
+		.flexContainer{
+			display: flex;
+			flex-direction: row;
+		}
+		.flexContainer section{
+			flex: 1;
+		}
+		@media only screen and (max-width: 500px){
+			.flexContainer{
+				flex-direction: column;
+			}
+		}
+	</style>
+</head>
+<body>
+	<h3>Layout using 'Float' Property</h3>
+	<div class="container">
+		<div>1</div>
+		<div>2</div>
+		<div>3</div>
+	</div>
+	<hr>
+	<h3>Layout using 'display' Property</h3>
+	<section class="flexContainer">
+		<section>1</section>
+		<section>2</section>
+		<section>3</section>
+	</section>
+</body>
+</html>
